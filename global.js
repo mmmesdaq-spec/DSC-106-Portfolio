@@ -16,7 +16,7 @@ let nav = document.createElement('nav');
 
 let BASE_PATH = location.hostname === 'localhost' || location.hostname === '127.0.0.1'
     ? '/'
-    : '/portfolio/';
+    : '/DSC-106-Portfolio/';
 
 for (let page of pages) {
     let a = document.createElement('a');
