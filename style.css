@@ -1,6 +1,7 @@
 html {
     --color-accent: oklch(65% 50% 0);
     accent-color: var(--color-accent);
+    color-scheme: light dark;
 }
 
 body {
@@ -105,4 +106,19 @@ h1, h2, h3, h4, h5, h6 {
 
 .cv-page li {
     margin-bottom: 0.5em;
+}
+
+.color-scheme {
+    position: absolute;
+    top: 0.25rem;
+    right: 1rem;
+    font-size: 80%;
+}
+
+nav {
+    margin-top: 2rem;
+}
+
+.color-scheme select {
+    font: inherit;
 }
