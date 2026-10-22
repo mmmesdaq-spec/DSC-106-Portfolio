@@ -17,17 +17,25 @@ const profileStats = document.querySelector('#profile-stats');
 if (githubData) {
     profileStats.innerHTML = `
         <dl>
-            <dt>Public Repositories</dt>
-            <dd>${githubData.public_repos}</dd>
+            <div class="stat-card">
+                <dd>${githubData.public_repos}</dd>
+                <dt>Public Repositories</dt>
+            </div>
 
-            <dt>Public Gists</dt>
-            <dd>${githubData.public_gists}</dd>
+            <div class="stat-card">
+                <dd>${githubData.public_gists}</dd>
+                <dt>Public Gists</dt>
+            </div>
 
-            <dt>Followers</dt>
-            <dd>${githubData.followers}</dd>
+            <div class="stat-card">
+                <dd>${githubData.followers}</dd>
+                <dt>Followers</dt>
+            </div>
 
-            <dt>Following</dt>
-            <dd>${githubData.following}</dd>
+            <div class="stat-card">
+                <dd>${githubData.following}</dd>
+                <dt>Following</dt>
+            </div>
         </dl>
     `;
 }

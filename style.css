@@ -122,3 +122,43 @@ nav {
 .color-scheme select {
     font: inherit;
 }
+
+/* GitHub Statistics */
+
+#profile-stats dl {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0 2rem;
+}
+
+#profile-stats .stat-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1.5rem 0.75rem;
+    background: light-dark(#f4f4f7, #242429);
+    border: 1px solid light-dark(#e5e5e9, #38383e);
+    border-radius: 0.85rem;
+    text-align: center;
+}
+
+#profile-stats .stat-card dd {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+#profile-stats .stat-card dt {
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+@media (max-width: 600px) {
+    #profile-stats dl {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
