@@ -162,3 +162,64 @@ nav {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
+
+#projects-pie-plot {
+    max-width: 20em;
+    margin-block: 2em;
+    overflow: visible;
+}
+
+.legend {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+    gap: 1em;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.swatch {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-color: var(--color);
+    border-radius: 0.25em;
+    flex-shrink: 0;
+}
+
+.pie-container {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+.pie-container .legend {
+    flex: 1;
+}
+
+.searchBar {
+    display: block;
+    margin-bottom: 2em;
+}
+
+#projects-pie-plot path {
+    transition: opacity 0.3s;
+    cursor: pointer;
+}
+
+#projects-pie-plot:has(path:hover) path:not(:hover) {
+    opacity: 0.5;
+}
+#projects-pie-plot path.selected {
+    stroke: black;
+    stroke-width: 2px;
+}
+
+.legend-item.selected {
+    font-weight: bold;
+}
