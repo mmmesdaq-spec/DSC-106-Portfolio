@@ -223,3 +223,84 @@ nav {
 .legend-item.selected {
     font-weight: bold;
 }
+
+#stats dl {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+#stats dl div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#stats dt {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: gray;
+}
+
+#stats dd {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.gridlines line {
+    stroke:#ccc;
+    stroke-opacity: 0.4;
+    stroke-dasharray: 3 3;
+}
+
+.gridlines path {
+    display: none;
+}
+
+#commit-tooltip {
+    position: fixed;
+    background: Canvas;
+    color: CanvasText;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    pointer-events: none;
+    z-index: 1000;
+    max-width: 250px;
+}
+
+#commit-tooltip[hidden] {
+    display: none;
+}
+
+#commit-tooltip dt {
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+#commit-tooltip dd {
+    margin-left: 0;
+    margin-bottom: 0.5rem;
+}
+#chart circle.selected {
+    fill: orange;
+    stroke: black;
+    stroke-width: 2px;
+}
+
+#chart .brush .overlay {
+    pointer-events: all;
+}
+
+#chart .brush .selection {
+    fill: steelblue;
+    fill-opacity: 0.15;
+    stroke: steelblue;
+    stroke-width: 1px;
+}
+
+#chart circle {
+    pointer-events: visiblePainted;
+}
