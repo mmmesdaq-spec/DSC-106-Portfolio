@@ -1,6 +1,13 @@
 
 [
     {
+    "title": "Bikewatching: Boston Bike Traffic",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "An interactive map of Boston and Cambridge bike lanes and Bluebikes stations, featuring traffic patterns, station activity, and a time-of-day slider. View the project: https://mmmesdaq-spec.github.io/bikewatching/",
+    "year": 2026
+    },
+    
+    {
         "title": "Lorem ipsum dolor sit.",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "",

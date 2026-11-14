@@ -107,8 +107,12 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
     for (let project of projects) {
         const article = document.createElement('article');
 
+        const projectTitle = project.title === 'Bikewatching: Boston Bike Traffic'
+            ? `<a href="https://mmmesdaq-spec.github.io/bikewatching/" target="_blank" rel="noopener noreferrer">${project.title}</a>`
+            : project.title;
+
         article.innerHTML = `
-            <${headingLevel}>${project.title}</${headingLevel}>
+            <${headingLevel}>${projectTitle}</${headingLevel}>
             <img src="${project.image}" alt="${project.title}">
             <div>
                 <p>${project.description}</p>
